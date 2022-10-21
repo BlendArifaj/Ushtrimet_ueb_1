@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Html forms</title>
+    </head>
+    <body>
+        <form action="./index.php">
+            <!-- Text element -->
+            <label for="username">Emri i perdoruesit:</label>
+            <input type="text" id="username"/>
+            <br/>
+            <!-- Password element -->
+            <label for="password">Fjalekalimi: </label>
+            <input type="password" id="password"/>
+            <br/>
+            
+            <!-- Radio element -->
+            <label>Zgjedheni njerin nga rolet:</label>
+            <label for="perdoruesi_admin">Admin</label>
+            <input type="radio" id="perdoruesi_admin" name="roli" checked/>
+
+            <label for="perdoruesi_jo_admin">Jo Admin</label>
+            <input type="radio" id="perdoruesi_jo_admin" name="roli" />
+            <br/>
+            <!-- Checkbox element -->
+            <label for="pranoni_kushtet">Pranoni kushtet per qasje ne platforme</label>
+            <input type="checkbox" id="pranoni_kushtet" />
+            <br/>
+            <!-- Color element -->
+            <label for="color">Zgjedheni ngjyren tuaj te preferuar:</label>
+            <input type="color" id="color" />
+            <br/>
+            <!-- Date element -->
+            <label for="date">Zgjedheni daten: </label>
+            <input type="date" id="date" />
+            <br/>
+            <!-- Date element -->
+            <label for="time">Zgjedheni kohen: </label>
+            <input type="time" id="time" />
+            <br/>
+            <!-- Datetime element -->
+            <label for="datetime">Zgjedheni daten dhe oren: </label>
+            <input type="datetime-local" id="datetime" />
+            <br/>
+
+             <!-- Week element -->
+             <label for="week">Zgjedheni Javen: </label>
+             <input type="week" id="week" />
+             <br/>
+
+              <!-- File element -->
+            <label for="file">Zgjedheni nje Fajll: </label>
+            <input type="file" id="file" />
+            <br/>
+
+            <!-- Number element -->
+            <label for="number">Zgjedheni nje number: </label>
+            <input type="number" id="number" min="0" max="100" step="10"/>
+            <br/>
+
+            <!-- Range element -->
+            <label> Zgjedheni njerin nga numrat: </label>
+            <input type="range" min="0" max="100" id="range" /> 
+            <br/>
+
+            <!-- Email element -->
+            <label>Email: </label>
+            <input type="email" id="email" />
+            <br/>
+
+            <!-- Tel element -->
+            <label>Tel: </label>
+            <input type="tel" id="tel" pattern="[0-9]{3}-[0-9]{3}" required/>
+            <br/>
+            <!-- Perdorimi i atributeve -->
+            <label for="username_1">Emri i perdoruesit:</label>
+            <input type="text" id="username_1" value="Perdoruesi" disabled/>
+            <br/>
+            <label for="username_2">Emri i perdoruesit:</label>
+            <input type="text" id="username_2" maxlength="10" readonly/>
+            <br/>
+
+            <!-- Select element -->
+            <label for="car">Zgjedheni makinen: </label>
+            <select id="car" name="car" > <!-- multiple attribute-->
+                <option value="bmw">BMW</option>
+                <option value="vw">VW</option>
+                <optgroup name="makinat">
+                    <option value="bmw">BMW</option>
+                    <option value="vw">VW</option>
+                </optgroup>
+            </select>
+
+            <br/>
+
+            <input type="submit" id="submit" value="Submit" />
+            <input type="reset" id="cancel" value="Cancel" />
+        </form>
+    </body>
+</html>
