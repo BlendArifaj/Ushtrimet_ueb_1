@@ -1,0 +1,62 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+p {
+    /* property: value; */
+    color: red;
+    text-align: left;
+}
+
+p, h1 {
+    text-align: center;
+}
+
+.first-paragraph{
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+}
+
+.red-border{
+    border-width: 1px;
+    border-style: solid;
+    border-color: red;
+}
+
+p.custom-style{
+    font-size: 30px;
+}
+
+h1.custom-style{
+    /* comment */
+}
+
+#second-paragraph-id{
+    color: green;
+    font-size: small;
+    font-style: italic;
+}
+
+.different-color{
+    color: rgb(100, 100 , 100);
+    /* color: #FFFFFF; */
+    /* color: rgba(100, 100, 100, 0.1); */
+    opacity: 0.8;
+}
+
+.background-color-red{
+    width: 200px;
+    height: 50px;
+    margin: 10px;
+    padding: 10px;
+    color: white;
+    background-color: red;
+}
+
+.border-solid-black-100{
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+}
