@@ -1,0 +1,16 @@
+ul li {
+    list-style: none;
+    float: left;
+    background-color: #333;
+    padding: 10px;
+    color: #fff;
+}
+
+li > a {
+    text-decoration: none;
+    color: #fff;
+}
+
+ul li a:hover {
+    color: #000;
+}
