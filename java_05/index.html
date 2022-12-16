@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #container{
+                width: 100px;
+                height: 100px;
+                color: green;
+                background-color: green;
+            }
+        </style>
+        <script src="script.js"> </script>
+        <script>
+            var number1 = 1;
+            let number2 = 2;
+            const number3 = 3;
+
+            function clickDiv1(){
+                alert('you clicked me!');
+            }
+
+            const clickDiv2 = () => {
+                debugger;
+            }
+
+            const car = {
+                model: "BMW",
+                year: 2022,
+                color: "red",
+                km: 0
+            }
+            
+            var date = new Date();
+            var kushti = true;
+            var numri = 2;
+            var text = "text";
+        </script>
+
+        <script>
+            const clickText = (e) => {
+                // document.getElementById("text-2").innerHTML = "<b> you clicked me </b>"
+                e.innerHTML = "<b> you clicked me </b>"
+            }
+
+            const updateValue = (valueToAdd) => {
+                // kur vlera = 0 => largohet butoni '-'
+                // kur vlera = 10 => largohet butoni '+' dhe shtohet butoni -
+
+                const element = document.getElementById("counter");
+                const decreaseCounterElement = document.getElementById("decreaseCounter")
+                const increaseCounterElement = document.getElementById("increaseCounter")
+
+                const value = parseInt(element.innerHTML) + valueToAdd;
+                if(value === 0){
+                    increaseCounterElement.style.display = "none";
+                    // increaseCounterElement.attributes.disabled = true; When we want to disabled instead of hide it!
+                }else if(value === 10){
+                    increaseCounterElement.style.display = "none";
+                }else{
+                    increaseCounterElement.style.display = "block";
+                    decreaseCounterElement.style.display = "block";
+                }
+
+                element.innerHTML = value
+            }
+        </script>
+
+        <script>
+            class Student {
+                constructor(emri, mbiemri, mosha){
+                    this.emri = emri;
+                    this.mbiemri = mbiemri;
+                    this.mosha = mosha;
+                }
+
+                shtypDetajet(){
+                    console.log(this.emri);
+                }
+            }
+
+            var student = new Student("test", "test", 20);
+            student.shtypDetajet();
+            
+        </script>
+    </head>
+    <body>
+        <!-- <div id="container" onclick="clickDiv1()">
+        </div> -->
+        <span id="decreaseCounter" onclick="updateValue(-1)"> 
+            -
+        </span> 
+        <div id="counter"> 0 </div>
+        <span id="increaseCounter" onclick="updateValue(1)">
+            +
+        </span>
+
+        <!-- <div id="text-2" onclick="clickText(this)"> 
+            Please click me!
+        </div> -->
+    </body>
+</html>

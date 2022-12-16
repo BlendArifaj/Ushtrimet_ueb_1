@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const clickMe = () => {
+                const element = document.getElementById("clickElement");
+                element.innerHTML = "You clicked me!";
+            }
+            function updateValue(value){
+                const decreaseValueElement = document.getElementById("decreaseValue")
+                const increaseValueElement = document.getElementById("increaseValue")
+
+                const element = document.getElementById("counter");
+                const elementUpdatedValue =  parseInt(element.innerHTML) + value;
+                element.innerHTML = elementUpdatedValue
+
+                if(elementUpdatedValue <= -10){
+                    decreaseValueElement.style.display = "none";
+                }else if(elementUpdatedValue >= 10){
+                    increaseValueElement.style.display = "none";
+                }else{
+                    increaseValueElement.style.display = "block";
+                    decreaseValueElement.style.display = "block";
+                }
+            }
+        </script>
+        <script>
+            class Car {
+                constructor(model, year, km){
+                    this.model = model;
+                    this.year = year;
+                    this.km = km;
+                }
+
+                displayData(){
+                    alert("Data: ...");
+                }
+            }
+
+            const bmw1 = new Car("m5", 2010, 200000);
+            const bmw2 = {
+                model: "m5",
+                year: 2010,
+                km: 0,
+            }
+
+            bmw1.displayData();
+        </script>
+    </head>
+    <body>
+        <!-- <div id="clickElement" onclick="clickMe()">
+            Please click me!
+        </div> -->
+        <span id="decreaseValue" onclick="updateValue(-1)">
+            -
+        </span>
+        <div id="counter">
+            0
+        </div>
+       <span id="increaseValue" onclick="updateValue(1)">
+            +
+       </span>
+    </body>
+</html>
