@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="app.js" defer></script>
+    </head>
+    <body>
+        <button id="click_me_btn" 
+            onclick="btnClickMeEvent()"
+            onmouseenter="btnMouseEnterEvent()"
+            onmouseleave="btnMouseLeaveEvent()"
+            >
+            Click me
+        </button>
+        <br/>
+        <div id="content" style="width:100px;height:100px;background-color:green;"
+            onmouseenter="contentMouseEnterEvent(this)"
+            onmouseleave="contentMouseLeaveEvent(this)"
+            >
+            Enter mouse here
+        </div>
+        <br/>
+        <input 
+            id="input_text" type="text" name="text" 
+            onkeydown="textKeyDownEvent(this)"
+            onkeyup="textKeyUpEvent(this)"
+        />
+        <br/>
+        <div>
+            Detyra 01:
+            <input id="input_detyra" type="text" name="input_name" />
+        </div>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="app.js" defer></script>
+    </head>
+    <body>
+        <button 
+            onclick="btnOnClick()"
+            onmouseenter="btnMouseEnter()"
+            onmouseleave="btnMouseLeave()"
+        >
+            Click Me!
+        </button>
+        <br/>
+        <div 
+            style="width:100px; height:100px;background-color:blue"
+            onmouseenter="contentMouseEnter(this)"
+            onmouseleave="contentMouseLeave(this)"    
+        >
+        </div>
+        <br/>
+        <div>
+            <input 
+                type="text"
+                name="text"
+                onkeydown="inputKeyDown(this)"
+                onkeyup="inputKeyPress(this)"
+            />
+        </div>
+        <br/>
+        <div>
+            Detyra 01:
+            <input 
+                type="text"
+                name="detyra"
+                id="input_detyra"
+            />
+        </div>
+    </body>
+</html>
