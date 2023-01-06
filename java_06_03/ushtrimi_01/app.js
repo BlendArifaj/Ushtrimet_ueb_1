@@ -30,7 +30,7 @@ window.onload = () => {
     }
     
     const inputKeyPress = (element) => {
-        const value = element.value;
+        const  value  = element.value;
         console.log("Input value on key up: ", value);
     }
     
